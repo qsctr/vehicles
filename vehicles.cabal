@@ -10,7 +10,18 @@ cabal-version:       >=1.10
 executable vehicles
   hs-source-dirs:      src
   main-is:             Main.hs
+  other-modules:       Constants
+                     , Vehicles.Vehicles
+                     , Vehicles.Vehicle
+                     , Vehicles.Math
+                     , Vehicles.Parts
+                     , Vehicles.OneWheeled
+                     , Vehicles.TwoWheeled
+                     , Vehicles.One
+                     , Vehicles.Two
+                     , Vehicles.Three
   default-language:    Haskell2010
   build-depends:       base >= 4.7 && < 5
+                     , random
                      , gloss
-  ghc-options: -Wall -O2 -threaded
+  ghc-options: -Wall -Werror -O2 -threaded
