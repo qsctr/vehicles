@@ -15,7 +15,7 @@ data Vehicle = Vehicle { function :: VehicleFunction, picture :: Picture, state 
 data VehicleState = VehicleState { location :: Point, angle :: Float }
 
 makeVehicle
-    :: (SourceLocation -> VehicleState -> sensorValues)               -- sense
+    :: (SourceLocation -> VehicleState -> sensorValues)                 -- sense
     -> (sensorValues -> motorVelocities)                                -- decide
     -> (TimePassed -> VehicleState -> motorVelocities -> VehicleState)  -- act
     -> Picture

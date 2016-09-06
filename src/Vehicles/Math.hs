@@ -14,7 +14,7 @@ type MotorVelocity = Float
 
 sensorRule :: Distance -> SensorValue
 sensorRule x
-    | x < mouseCircleRadius = (1 / x ^ 2) * 1e6
+    | x < mouseCircleRadius = (1 / x ^ 2) * 1e6 -- inverse square law
     | otherwise = 0
 
 inverse :: SensorValue -> MotorVelocity
